@@ -1,5 +1,10 @@
 # Kubia - Kubernetes in action sample project
 
+## Requirements
+* Docker
+* Minikube
+* Kubectl
+
 ## Setup
 1. Build docker image
 ```docker build -t kubia .```
@@ -51,5 +56,6 @@
 ```kubectl get pods -l 'env notin (prod,devel)'```
 11. List pods that have a label with creation_method other than manual
 ```kubectl get pods -l 'creation_method != manual'```
-11. Multiple label selectors
+12. Multiple label selectors
 ```kubectl get pods -l 'creation_method=manual,env=debug'```
+
