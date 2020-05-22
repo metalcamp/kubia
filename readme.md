@@ -20,27 +20,35 @@
 
 ## Create pod
 1. Create Kubernetes pod from YAML file
+    
     ```kubectl create -f kubia-manual.yaml``` 
 
 2. Get full pod descriptor in YAML
+    
     ```kubectl get pod kubia-manual -o yaml``` 
 
 3. Get full pod descriptor in JSON
+    
     ```kubectl get pod kubia-manual -o json``` 
 
 4. Get pods
+    
     ```kubectl get pods``` 
 
 5. Get pod's log (if single container in pod)
+    
     ```kubectl logs kubia-manual```
 
 6. Get pod's logs (if multiple containers in pod)
+    
     ```kubectl logs kubia-manual -c kubia```
 
 7. Setup port forwarding from local machine port to the pod
+    
     ```kubectl port-forward kubia-manual 8888:8080```
 
 8. Test port forwarding
+    
     ```curl localhost:8888```
 
 ## Labels
@@ -106,3 +114,10 @@
     ```kubectl label node <nodeName> <label>```
 
     ```kubectl label node minikube gpu=true```
+    
+3. List only nodes with specific label
+    
+    ```kubectl get nodes -l <label>```
+    
+    ```kubectl get nodes -l gpu=true```
+    
