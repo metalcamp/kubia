@@ -121,3 +121,16 @@
     
     ```kubectl get nodes -l gpu=true```
     
+## Pods 
+    
+1. List pods
+    ```kubectl get pods```
+    
+2. Get single pod info
+    
+    ```kubectl get pod <name> -o yaml```
+    
+    ```kubectl get pod kubia-manual -o yaml```
+    
+    ```kubectl describe pod kubia-manual```
+    
