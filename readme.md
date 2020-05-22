@@ -1,5 +1,12 @@
 # Kubia - Kubernetes in action sample project
 
+## Table of contents
+* [Requirements](#requirements)
+* [Setup](#setup)
+* [Pods](#pods)
+* [Pods & labels](#pods--labels)
+* [Nodes](#nodes)
+
 ## Requirements
 * Docker
 * Minikube
@@ -18,7 +25,7 @@
 
     ```docker push <username>/kubia```
 
-## Create pod
+## Pods
 1. Create Kubernetes pod from YAML file
     
     ```kubectl create -f kubia-manual.yaml``` 
@@ -51,7 +58,8 @@
     
     ```curl localhost:8888```
 
-## Labels
+# Pods & labels
+
 1. Create pods with labels
     
     ```kubectl create -f kubia-manual-with-labels.yaml```
@@ -120,17 +128,3 @@
     ```kubectl get nodes -l <label>```
     
     ```kubectl get nodes -l gpu=true```
-    
-## Pods 
-    
-1. List pods
-    ```kubectl get pods```
-    
-2. Get single pod info
-    
-    ```kubectl get pod <name> -o yaml```
-    
-    ```kubectl get pod kubia-manual -o yaml```
-    
-    ```kubectl describe pod kubia-manual```
-    
