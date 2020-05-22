@@ -15,3 +15,11 @@
 ```kubectl get pod kubia-manual -o json``` 
 7. Get pods
 ```kubectl get pods``` 
+8. Get pod's log (if single container in pod)
+```kubectl logs kubia-manual```
+9. Get pod's logs (if multiple containers in pod)
+```kubectl logs kubia-manual -c kubia```
+10. Setup port forwarding from local machine port to the pod
+```kubectl port-forward kubia-manual 8888:8080```
+11. Test post forwarding
+```curl localhost:8888```
